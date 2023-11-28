@@ -17,7 +17,7 @@ const SearchForm = ({ onSearch }) => {
       onSearch(query);
     };
     return(
-        <form className="search-form" onSubmit={handleSubmit}>
+        <form className="search-form" style={{position: "absolute",  top: 390, display: "flex", alignItems: "center"}} onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Search books..."

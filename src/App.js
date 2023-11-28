@@ -5,8 +5,8 @@ import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
+import BookShelf from './components/BookShelf';
 import BookDetails from './components/BookDetails';
-import Book from './components/Book';
 // import SignUp from './components/pages/Signup';
 import Hero from './components/Hero';
 import SearchForm from './components/SearchForm';
@@ -22,10 +22,10 @@ export default function App() {
           <div className="main-content">
             <Hero />
             <SearchForm />
-            <Book />
-           
+          
+            <BookShelf />
           </div>
-         
+           
           <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
