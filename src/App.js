@@ -1,25 +1,61 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+// import {Link, Route, Routes, Navigate} from "react-router-dom";
+import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
 
-function App() {
+import Navbar from './components/Navbar';
+import Home from './components/Home';
+import About from './components/About';
+import BookDetails from './components/BookDetails';
+import Book from './components/Book';
+// import SignUp from './components/pages/Signup';
+import Hero from './components/Hero';
+import SearchForm from './components/SearchForm';
+import Footer from './components/Footer';
+import '../src/App.css'
+
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+     
+      <Router>
+          <Navbar />
+          <div className="main-content">
+            <Hero />
+            <SearchForm />
+            <Book />
+           
+          </div>
+         
+          <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/bookdetails" element={<BookDetails />} />
+              {/* <Route path="/sign-up" element={<SignUp />}/> */}
+          </Routes>
+          <Footer/>
+      </Router>
+  
   );
 }
 
-export default App;
+// function App() {
+//   return (
+//     <>
+//     <nav>
+//       <Navbar/>
+//     </nav>
+//     <main>
+//       <Header/>
+//     </main>
+//       <Routes>
+//             <Route path="/home" element={ <Home/> } />
+//             <Route path="/about" element={ <About/> } />
+//             <Route path="/book" element={ <Book/> } />
+//             <Route path="/bookDetails" element={ <BookDetails/> } />
+//             {/* <Route path="*" element={ <Navigate to="/home" />} />  */}
+//       </Routes> 
+//     </>
+//   );
+// }
+
+
