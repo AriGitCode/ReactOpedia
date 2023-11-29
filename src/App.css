@@ -163,7 +163,7 @@ button:hover {
   text-align: center;
   position: relative;
   width: 100%; 
-  max-width: 200px; /* Optionally set a maximum width for each book */
+  max-width: 200px; 
 }
 
 .book img {
