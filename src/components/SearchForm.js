@@ -1,36 +1,33 @@
-import React, {useState} from "react";
+import axios from "axios";
+import React, { useState } from "react";
 import { BsSearchHeart } from "react-icons/bs";
-import  "./SearchForm.css";
 
+const SearchForm = () => {
+  const [search, setSearch] = useState('');
 
+  const searchBook = (e) => {
+    if (e.key === "Enter") {
+      // const searchTerm = e.target.value;
+      axios.get('https://www.googleapis.com/books/v1/volumes?q='+search+'&key=AIzaSyCL81PxIBZ-aa481GhiJ2yOf2pvPqKb790')
+      .then(res=>console.log(res.data.items))
+      .catch(err=>console.log(err))
+    }
+  };
 
-const SearchForm = ({ onSearch }) => {
-   
-    const [query, setQuery] = useState('');
-  
-    const handleInputChange = (e) => {
-      setQuery(e.target.value);
-    };
-  
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      onSearch(query);
-    };
-    return(
-        <form className="search-form" style={{position: "absolute",  top: 390, display: "flex", alignItems: "center"}} onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Search books..."
-          value={query}
-          onChange={handleInputChange}
-        />
-        <button type="submit">  <BsSearchHeart className="icon" size={32} /></button>
-      </form>
+  return (
+    <form className="search-form" style={{ position: "absolute", top: 390, display: "flex", alignItems: "center" }}>
+      <input
+        type="text"
+        placeholder="Search books..."
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+        onKeyPress={searchBook}
+      />
+      <button type="submit">
+        <BsSearchHeart className="icon" size={32} />
+      </button>
+    </form>
+  );
+};
 
-     
-    )
-
-}
-
-export default SearchForm
-
+export default SearchForm;

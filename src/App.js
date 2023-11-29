@@ -3,7 +3,7 @@ import React from 'react';
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
 
 import Navbar from './components/Navbar';
-import Home from './components/Home';
+// import Home from './components/Home';
 import About from './components/About';
 import BookShelf from './components/BookShelf';
 import BookDetails from './components/BookDetails';
@@ -23,11 +23,12 @@ export default function App() {
             <Hero />
             <SearchForm />
           
-            <BookShelf />
+            
           </div>
            
           <Routes>
-              <Route path="/" element={<Home />} />
+              {/* <Route path="/home" element={<Home />} /> */}
+              <Route path="/home" element={<BookShelf/>} />
               <Route path="/about" element={<About />} />
               <Route path="/bookdetails" element={<BookDetails />} />
               {/* <Route path="/sign-up" element={<SignUp />}/> */}

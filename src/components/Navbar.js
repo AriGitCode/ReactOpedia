@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBookBookmark } from "react-icons/fa6";
-import './Navbar.css'
 import { ImMenu3 } from "react-icons/im";
 
 const Navbar = () => {

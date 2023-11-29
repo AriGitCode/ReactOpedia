@@ -2,7 +2,7 @@ import React from "react";
 //import Godfather from "./../images/Godfather.png";
 
 const Book =(props = {}) =>{
-  //console.log("ii: ", props.imgi);
+  // console.log("ii: ", props.imgi);
     return(
       <div className="book">
         <img src={props.img} alt=""/>
