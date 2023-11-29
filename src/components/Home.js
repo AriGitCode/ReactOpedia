@@ -1,10 +1,20 @@
-import React from "react";
-
+import React, { useState } from "react";
+import BookShelf from "./BookShelf";
+import Hero from "./Hero";
+import SearchForm from "./SearchForm";
 const Home =() =>{
-    return(
-        <div>
 
-        </div>
+    const [books, setBooks] = useState([])
+
+    
+
+    return(
+        <div className="main-content">
+            <Hero />
+            <SearchForm setBooks={setBooks}/>
+            <BookShelf books={books}/>
+            
+          </div>
     )
 
 }

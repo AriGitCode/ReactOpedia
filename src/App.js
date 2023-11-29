@@ -12,25 +12,23 @@ import Hero from './components/Hero';
 import SearchForm from './components/SearchForm';
 import Footer from './components/Footer';
 import '../src/App.css'
+import Home from './components/Home';
 
 
 export default function App() {
+
+
   return (
      
       <Router>
           <Navbar />
-          <div className="main-content">
-            <Hero />
-            <SearchForm />
           
-            
-          </div>
            
           <Routes>
               {/* <Route path="/home" element={<Home />} /> */}
-              <Route path="/home" element={<BookShelf/>} />
+              <Route path="/home" element={<Home/>} />
               <Route path="/about" element={<About />} />
-              <Route path="/bookdetails" element={<BookDetails />} />
+              <Route path="/bookdetails/:bookID" element={<BookDetails />} />
               {/* <Route path="/sign-up" element={<SignUp />}/> */}
           </Routes>
           <Footer/>
