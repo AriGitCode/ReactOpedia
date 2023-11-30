@@ -15,7 +15,7 @@ const Book =(props = {}) =>{
         <img src={book.volumeInfo.imageLinks?.smallThumbnail} alt=""/>
         <div className="bottom">
             <h3 className="title">{book.volumeInfo.title}</h3>
-            <h3 className="title">{book.volumeInfo.authors?.join(", ")}</h3>
+            <h3 className="title">Author: {book.volumeInfo.authors?.join(", ")}</h3>
 
         </div> 
         

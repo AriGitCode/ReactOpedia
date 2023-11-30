@@ -8,8 +8,6 @@ import About from './components/About';
 import BookShelf from './components/BookShelf';
 import BookDetails from './components/BookDetails';
 // import SignUp from './components/pages/Signup';
-import Hero from './components/Hero';
-import SearchForm from './components/SearchForm';
 import Footer from './components/Footer';
 import '../src/App.css'
 import Home from './components/Home';
