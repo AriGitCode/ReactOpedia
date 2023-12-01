@@ -16,6 +16,8 @@ const SearchForm = (props={}) => {
   };
 
   return (
+    <>
+    
     <form className="search-form" style={{ position: "absolute", top: 390, display: "flex", alignItems: "center" }}>
       <input
         type="text"
@@ -32,6 +34,8 @@ const SearchForm = (props={}) => {
         <BsSearchHeart className="icon" size={32} />
       </button>
     </form>
+    
+    </>
   );
 };
 

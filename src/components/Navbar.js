@@ -3,29 +3,39 @@ import { Link } from "react-router-dom";
 import { FaBookBookmark } from "react-icons/fa6";
 import { ImMenu3 } from "react-icons/im";
 
+
 const Navbar = () => {
 	const [toggleMenu, setToggleMenu] = useState(false);
-	const hanleNavbar = () => setToggleMenu(!setToggleMenu);
-
-
+	const handleNavbar = () => setToggleMenu(!setToggleMenu);
+     
 	return (
+		<nav className="navbar">
+		  <div className="logo-container">
+			<FaBookBookmark className="nav-icon" />
+			<Link className="logo" to="/home">
+			  ReactOpedia
+			</Link>
+		  </div>
+		  <button><ImMenu3
+			className="navbar-toggle"
+			size={35}
+			onClick={handleNavbar}
+			style={{ color: toggleMenu ? '#fff' : '#010101' }}
+		  /></button>
+		  <div className={`navbar-links ${toggleMenu ? 'show-navbar' : ''}`}>
+			<ul>
+			  <li>
+				<Link to="/about">About</Link>
+			  </li>
+			  <li>
+				<Link to="/favourites">Highlights</Link>
+			  </li>
+			</ul>
+		  </div>
+		</nav>
+	  );
+	};
 	
-        <nav>
-         
-				<button type="button" className="navbar-tog-btn" onClick={hanleNavbar}><ImMenu3 size={35} style={{color:`${toggleMenu ? "#fff" : "#010101"}`}} /></button>
-				<div className={toggleMenu ? "navbar-collapse show-navbar" : "navbar-collapse"}>
-						<ul className="navbar-nav">
-						<li className="nav-item">
-							<FaBookBookmark className="nav--icon"/>
-							<Link className="nav-pages" id="logo" to="/home" > ReactOpedia</Link>
-							<Link className="nav-pages" to="/about" > About</Link>
-							<Link className="nav-pages" to="/favourites">Highlights</Link>
-						</li>
-						</ul>
-				</div>
-        </nav>
-	);
-};
 
 export default Navbar;
 

@@ -1,5 +1,3 @@
-// BookDetails.js
-
 import React, { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { PiEyeClosedDuotone } from "react-icons/pi";

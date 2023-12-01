@@ -4,7 +4,7 @@ import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
 import Navbar from './components/Navbar';
 // import Home from './components/Home';
 import About from './components/About';
-import BookShelf from './components/BookShelf';
+// import Features from './components/Features';
 import BookDetails from './components/BookDetails';
 import Highlights from './components/Highlights';
 import Footer from './components/Footer';
@@ -28,6 +28,7 @@ export default function App() {
               <Route path="/bookdetails/:bookID" element={<BookDetails />} />
               <Route path="/favourites" element={<Highlights />}/> 
           </Routes>
+       
           <Footer/>
       </Router>
   
