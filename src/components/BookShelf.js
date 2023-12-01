@@ -7,6 +7,7 @@ const BookShelf =(props={}) =>{
 
     return(
         <div className="book-shelf">
+            <h1>Your Search here: </h1>
           {
             props.books.map(book=>{
               return <Book key={book.id} book={book}/>

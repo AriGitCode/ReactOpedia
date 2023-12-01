@@ -6,6 +6,7 @@ import DecideBookVideo from "./../images/DecideBook.mp4";
 
 const Hero =() =>{
     return(
+        <>
         <div className="hero-content">
             
            
@@ -13,7 +14,10 @@ const Hero =() =>{
             <h2 className="hero-slogan">DISCOVER YOUR CHAPTER</h2>
              {/* <p className="hero-text"></p> */}
 
+
         </div>
+       
+        </>
     )
 
 }

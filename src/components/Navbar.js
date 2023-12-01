@@ -19,8 +19,7 @@ const Navbar = () => {
 							<FaBookBookmark className="nav--icon"/>
 							<Link className="nav-pages" id="logo" to="/home" > ReactOpedia</Link>
 							<Link className="nav-pages" to="/about" > About</Link>
-							
-							{/* <Link className="nav-pages" to="/sign-up" activeStyle>Sign Up</Link> */}
+							<Link className="nav-pages" to="/favourites">Highlights</Link>
 						</li>
 						</ul>
 				</div>

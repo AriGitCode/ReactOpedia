@@ -212,7 +212,8 @@ button:hover {
 .inner-overlay .inner-box{
   margin-top: 30px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  text-align: justify;
 }
 .inner-overlay .inner-box img{
   margin-right: 20px;
