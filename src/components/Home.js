@@ -13,8 +13,8 @@ const Home =() =>{
             <Hero />
             <SearchForm setBooks={setBooks}/>
             <BookShelf books={books}/>
-            
-          </div>
+        </div>
+         
     )
 
 }

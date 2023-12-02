@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBookBookmark } from "react-icons/fa6";
-import { ImMenu3 } from "react-icons/im";
+// import { ImMenu3 } from "react-icons/im";
 
 
 const Navbar = () => {
 	const [toggleMenu, setToggleMenu] = useState(false);
-	const handleNavbar = () => setToggleMenu(!setToggleMenu);
+	// const handleNavbar = () => setToggleMenu(!setToggleMenu);
      
 	return (
 		<nav className="navbar">
@@ -16,13 +16,13 @@ const Navbar = () => {
 			  ReactOpedia
 			</Link>
 		  </div>
-		  <button><ImMenu3
+		  {/* <button type="button"><ImMenu3
 			className="navbar-toggle"
 			size={35}
 			onClick={handleNavbar}
 			style={{ color: toggleMenu ? '#fff' : '#010101' }}
-		  /></button>
-		  <div className={`navbar-links ${toggleMenu ? 'show-navbar' : ''}`}>
+		  /></button> */}
+		  <div className={`navbar-links ${toggleMenu ? 'show-navbar' : 'navbar-collapse'}`}>
 			<ul>
 			  <li>
 				<Link to="/about">About</Link>

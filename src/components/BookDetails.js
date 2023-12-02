@@ -15,6 +15,8 @@ const BookDetails = () => {
       .then((response) => {
         setBook(response.data);
         const likedBooks = JSON.parse(localStorage.getItem('likedBooks')) || [];
+        const likedBook = likedBooks.some((b) => b.id === response.data.id);
+        console.log(likedBook);
         setIsLiked(likedBooks.some((b) => b.id === response.data.id));
       })
       .catch((error) => {
@@ -27,6 +29,8 @@ const BookDetails = () => {
       const likedBooks = JSON.parse(localStorage.getItem('likedBooks')) || [];
 
       const bookExistsIndex = likedBooks.findIndex((existingBook) => existingBook.id === book.id);
+
+      console.log(bookExistsIndex);
 
       if (bookExistsIndex === -1) {
         likedBooks.push(book);

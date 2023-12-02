@@ -14,7 +14,7 @@ const About = () => {
         </div>
         <div className="about-text">
           <h3 className="about-welcome">
-            Hello, I'm Aidana! I welcome you to my app ReactOpedia!
+            Hello, I'm Aidana! Welcome to my ReactOpedia app!
             <br />
             The world of books has always fascinated me — I find solace and
             inspiration within their pages, transporting myself to any place and
@@ -22,7 +22,7 @@ const About = () => {
           </h3>
           <div className="guide-section">
             <h3 className="guide-text">Let me guide you through the experience:</h3>
-            <p>
+           
               <h3 className="about-nav">Home Page:</h3> Start by searching for a book
               that piques your interest. Once the results appear, select a book
               to read its description.
@@ -35,7 +35,7 @@ const About = () => {
               <h3 className="about-nav">Highlights Page:</h3> Navigate to the 'Highlights'
               page to conveniently view and manage your selected books list. Here,
               you'll find all the books you've liked for easy access.
-            </p>
+           
             <blockquote>
               <strong>
                 “A reader lives a thousand lives before he dies. The man who
