@@ -7,16 +7,14 @@ const BookShelf =(props={}) =>{
 
     return(
         <div className="book-shelf">
-        <h1 className="your-search">Your Search here: </h1>
+            <h1 className="your-search">Your Search here: </h1>
           {
             props.books.map(book=>{
               return <Book key={book.id} book={book}/>
             })
           }
-        </div>
-       
+        </div> 
     )
-
 }
 
 export default BookShelf

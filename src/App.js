@@ -2,7 +2,6 @@ import React from 'react';
 import {BrowserRouter as Router,Routes,Route} from "react-router-dom";
 
 import Navbar from './components/Navbar';
-// import Home from './components/Home';
 import About from './components/About';
 import BookDetails from './components/BookDetails';
 import Highlights from './components/Highlights';
@@ -12,8 +11,6 @@ import Home from './components/Home';
 
 
 export default function App() {
-
-
   return (
     <div className='app'>
       <Router>
@@ -21,7 +18,6 @@ export default function App() {
           
            <main className='app-main'>
            <Routes>
-           {/* <Route path="/home" element={<Home />} /> */}
            <Route path="/home" element={<Home/>} />
            <Route path="/about" element={<About />} />
            <Route path="/bookdetails/:bookID" element={<BookDetails />} />

@@ -6,7 +6,7 @@ const About = () => {
   return (
     <section className="about">
       <div className="about-title">
-        <h2>About</h2>
+        <h2>A few words from me</h2>
       </div>
       <div className="about-content">
         <div className="about-img">

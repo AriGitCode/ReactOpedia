@@ -1,9 +1,9 @@
 import React from "react";
 import {useNavigate} from "react-router-dom"
 
-const Book =(props = {}) =>{
+const Book =(props) =>{
 
-  const book = props.book
+  const {book}= props
   const navigate = useNavigate();
 
   if (!book || !book.volumeInfo || !book.volumeInfo.imageLinks) {
@@ -12,7 +12,6 @@ const Book =(props = {}) =>{
   }
 
   const { title, authors, imageLinks } = book.volumeInfo;
-
 
     return(
       <div onClick={()=>{
